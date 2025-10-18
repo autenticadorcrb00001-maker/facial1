@@ -92,6 +92,7 @@ async function startCamera() {
         const video = document.getElementById('video');
         video.srcObject = stream;
 
+        // Simula a análise facial (7 segundos)
         setTimeout(() => {
             document.getElementById('checkmark').style.display = 'block';
             document.getElementById('continueBtn').style.display = 'block';
@@ -104,8 +105,9 @@ async function startCamera() {
 
 startCamera();
 
+// Quando o usuário clicar em continuar, volta para o app
 document.getElementById('continueBtn').addEventListener('click', () => {
-    window.location.href = "telainicial.html";
+    window.location.href = "telainicial.html"; // rota do seu app
 });
 </script>
 
